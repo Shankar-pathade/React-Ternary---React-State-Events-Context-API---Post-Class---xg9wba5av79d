@@ -7,22 +7,16 @@ const App = () => {
     setDay(date.toLocaleString(window.navigator.language, { weekday: 'long' }));
   }, [date])
   const setTheMessage = (day) => {
-    Hey {day === "Monday"
-        ? "Mango Monday"
-        : day === "Tuesday"
-          ? "Tomato Tuesday"
-          : day === "Wednesday"
-            ? "Windy Wednesday"
-            : day === "Thursday"
-              ? "Thunder Thursday"
-              : day === "Friday"
-                ? "Fun Friday"
-                : day === "Saturday"
-                  ? "Smooth Saturday"
-                  : day === "Sunday"
-                    ? "Sugar Sunday"
-                    : ""}
-    
+    return (day === "Monday") ? "Hey Mango Monday" :
+           (day === "Tuesday") ? "Hey Tomato Tuesday" :
+           (day === "Wednesday") ? "Hey Windy Wednesday" :
+           (day === "Thursday") ? "Hey Thunder Thursday" :
+           (day === "Friday") ? "Hey Fun Friday" :
+           (day === "Saturday") ? "Hey Smooth Saturday" :
+           (day === "Sunday") ? "Hey Sugar Sunday" :
+         "";
+     
+
   }
   const msg = setTheMessage(day)
 
